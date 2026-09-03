@@ -1,0 +1,112 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.com/term-graph-visualizer/dictionary.schema.json",
+  "title": "Term Graph Visualizer Dictionary",
+  "type": "object",
+  "required": ["title", "categories", "terms"],
+  "additionalProperties": false,
+  "properties": {
+    "$schema": { "type": "string" },
+    "title": { "type": "string", "minLength": 1 },
+    "eyebrow": { "type": "string" },
+    "sidebarEyebrow": { "type": "string" },
+    "description": { "type": "string" },
+    "instructions": { "type": "string" },
+    "searchPlaceholder": { "type": "string" },
+    "defaultTermId": { "type": "string", "minLength": 1 },
+    "categories": {
+      "type": "array",
+      "minItems": 1,
+      "items": { "$ref": "#/$defs/category" }
+    },
+    "sources": {
+      "type": "array",
+      "items": { "$ref": "#/$defs/source" }
+    },
+    "terms": {
+      "type": "array",
+      "minItems": 1,
+      "items": { "$ref": "#/$defs/term" }
+    },
+    "edges": {
+      "type": "array",
+      "items": { "$ref": "#/$defs/edge" }
+    }
+  },
+  "$defs": {
+    "slug": {
+      "type": "string",
+      "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$"
+    },
+    "category": {
+      "type": "object",
+      "required": ["id", "label", "color"],
+      "additionalProperties": false,
+      "properties": {
+        "id": { "$ref": "#/$defs/slug" },
+        "label": { "type": "string", "minLength": 1 },
+        "color": {
+          "type": "string",
+          "enum": [
+            "--cp-accent",
+            "--cp-link",
+            "--cp-success",
+            "--cp-danger",
+            "--cp-warning",
+            "--cp-text-muted",
+            "--cp-border-strong"
+          ]
+        }
+      }
+    },
+    "source": {
+      "type": "object",
+      "required": ["id", "title"],
+      "additionalProperties": false,
+      "properties": {
+        "id": { "$ref": "#/$defs/slug" },
+        "title": { "type": "string", "minLength": 1 },
+        "type": { "type": "string" },
+        "url": { "type": "string" },
+        "notes": { "type": "string" }
+      }
+    },
+    "term": {
+      "type": "object",
+      "required": ["id", "title", "category", "summary", "details", "related"],
+      "additionalProperties": false,
+      "properties": {
+        "id": { "$ref": "#/$defs/slug" },
+        "title": { "type": "string", "minLength": 1 },
+        "category": { "$ref": "#/$defs/slug" },
+        "summary": { "type": "string" },
+        "details": { "type": "string" },
+        "aliases": {
+          "type": "array",
+          "items": { "type": "string" },
+          "uniqueItems": true
+        },
+        "related": {
+          "type": "array",
+          "items": { "$ref": "#/$defs/slug" },
+          "uniqueItems": true
+        },
+        "sourceIds": {
+          "type": "array",
+          "items": { "$ref": "#/$defs/slug" },
+          "uniqueItems": true
+        }
+      }
+    },
+    "edge": {
+      "type": "object",
+      "required": ["source", "label", "target"],
+      "additionalProperties": false,
+      "properties": {
+        "source": { "$ref": "#/$defs/slug" },
+        "label": { "$ref": "#/$defs/slug" },
+        "target": { "$ref": "#/$defs/slug" }
+      }
+    }
+  }
+}

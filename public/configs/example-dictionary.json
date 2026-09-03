@@ -1,0 +1,1437 @@
+{
+  "$schema": "../../schema/dictionary.schema.json",
+  "title": "Product Launch Dictionary",
+  "eyebrow": "Configurable term graph",
+  "sidebarEyebrow": "Dictionary config",
+  "description": "A synthetic public sample showing how teams can map a product launch vocabulary into terms, references, aliases, and typed relationships.",
+  "instructions": "Edit the selected term, save the JSON config, or export a static view-only snapshot.",
+  "searchPlaceholder": "Try GTM, launch, segment, KPI...",
+  "defaultTermId": "product-launch",
+  "categories": [
+    {
+      "id": "concept",
+      "label": "Concept",
+      "color": "--cp-border-strong"
+    },
+    {
+      "id": "process",
+      "label": "Process",
+      "color": "--cp-warning"
+    },
+    {
+      "id": "role",
+      "label": "Role",
+      "color": "--cp-success"
+    },
+    {
+      "id": "artifact",
+      "label": "Artifact",
+      "color": "--cp-link"
+    },
+    {
+      "id": "metric",
+      "label": "Metric",
+      "color": "--cp-warning"
+    },
+    {
+      "id": "channel",
+      "label": "Channel",
+      "color": "--cp-text-muted"
+    },
+    {
+      "id": "asset",
+      "label": "Asset",
+      "color": "--cp-link"
+    },
+    {
+      "id": "stage",
+      "label": "Stage",
+      "color": "--cp-border-strong"
+    },
+    {
+      "id": "insight",
+      "label": "Insight",
+      "color": "--cp-success"
+    },
+    {
+      "id": "risk",
+      "label": "Risk",
+      "color": "--cp-danger"
+    },
+    {
+      "id": "experiment",
+      "label": "Experiment",
+      "color": "--cp-warning"
+    },
+    {
+      "id": "operation",
+      "label": "Operation",
+      "color": "--cp-text-muted"
+    }
+  ],
+  "sources": [
+    {
+      "id": "launch-workshop",
+      "title": "Launch planning workshop",
+      "type": "Workshop notes",
+      "url": "",
+      "notes": "Synthetic source for launch goals, roles, stages, and assumptions."
+    },
+    {
+      "id": "customer-research-summary",
+      "title": "Customer research summary",
+      "type": "Research notes",
+      "url": "",
+      "notes": "Synthetic source for customer segments, needs, objections, and positioning."
+    },
+    {
+      "id": "launch-scorecard",
+      "title": "Launch scorecard",
+      "type": "Measurement plan",
+      "url": "",
+      "notes": "Synthetic source for KPIs, targets, adoption, conversion, and retention."
+    }
+  ],
+  "terms": [
+    {
+      "id": "product-launch",
+      "title": "Product Launch",
+      "category": "process",
+      "summary": "Coordinated release of a product or feature to a target audience.",
+      "details": "A launch connects planning, readiness, messaging, channel activation, measurement, and follow-up into one lifecycle.",
+      "aliases": [
+        "Launch",
+        "Release"
+      ],
+      "related": [
+        "launch-plan",
+        "go-to-market-strategy",
+        "launch-readiness-review",
+        "success-metric"
+      ],
+      "sourceIds": [
+        "launch-workshop",
+        "launch-scorecard"
+      ]
+    },
+    {
+      "id": "go-to-market-strategy",
+      "title": "Go-To-Market Strategy",
+      "category": "artifact",
+      "summary": "Plan for reaching the right audience with the right message and channel mix.",
+      "details": "The GTM strategy defines the target segment, positioning, launch channels, success metrics, and feedback loops.",
+      "aliases": [
+        "GTM",
+        "GTM Strategy"
+      ],
+      "related": [
+        "product-launch",
+        "customer-segment",
+        "positioning-statement",
+        "launch-channel"
+      ],
+      "sourceIds": [
+        "launch-workshop",
+        "customer-research-summary"
+      ]
+    },
+    {
+      "id": "launch-plan",
+      "title": "Launch Plan",
+      "category": "artifact",
+      "summary": "Documented plan for launch activities, owners, dates, dependencies, and risks.",
+      "details": "The plan gives teams a shared operating view across launch readiness, campaigns, enablement, support, and measurement.",
+      "aliases": [
+        "Plan"
+      ],
+      "related": [
+        "product-launch",
+        "launch-owner",
+        "launch-milestone",
+        "launch-risk"
+      ],
+      "sourceIds": [
+        "launch-workshop"
+      ]
+    },
+    {
+      "id": "launch-owner",
+      "title": "Launch Owner",
+      "category": "role",
+      "summary": "Person accountable for coordinating launch execution and tradeoff decisions.",
+      "details": "The launch owner keeps work moving across product, marketing, sales, support, and analytics.",
+      "aliases": [
+        "Owner"
+      ],
+      "related": [
+        "launch-plan",
+        "product-manager",
+        "readiness-owner"
+      ],
+      "sourceIds": [
+        "launch-workshop"
+      ]
+    },
+    {
+      "id": "product-manager",
+      "title": "Product Manager",
+      "category": "role",
+      "summary": "Person accountable for product direction, scope, and customer value.",
+      "details": "The product manager connects customer needs, business goals, launch scope, and roadmap decisions.",
+      "aliases": [
+        "PM"
+      ],
+      "related": [
+        "product-launch",
+        "roadmap",
+        "customer-segment",
+        "positioning-statement"
+      ],
+      "sourceIds": [
+        "launch-workshop",
+        "customer-research-summary"
+      ]
+    },
+    {
+      "id": "customer-segment",
+      "title": "Customer Segment",
+      "category": "concept",
+      "summary": "Group of customers with shared needs, behaviors, or buying triggers.",
+      "details": "Segments help teams tailor messaging, prioritization, onboarding, and success metrics.",
+      "aliases": [
+        "Segment",
+        "Audience"
+      ],
+      "related": [
+        "go-to-market-strategy",
+        "target-persona",
+        "adoption-funnel"
+      ],
+      "sourceIds": [
+        "customer-research-summary"
+      ]
+    },
+    {
+      "id": "target-persona",
+      "title": "Target Persona",
+      "category": "concept",
+      "summary": "Representative user or buyer profile for launch planning.",
+      "details": "A persona makes audience assumptions explicit so messaging and channel choices can be tested.",
+      "aliases": [
+        "Persona"
+      ],
+      "related": [
+        "customer-segment",
+        "positioning-statement",
+        "customer-objection"
+      ],
+      "sourceIds": [
+        "customer-research-summary"
+      ]
+    },
+    {
+      "id": "positioning-statement",
+      "title": "Positioning Statement",
+      "category": "artifact",
+      "summary": "Concise explanation of who the product is for and why it matters.",
+      "details": "Positioning turns customer research into a clear claim that can be used across channels.",
+      "aliases": [
+        "Positioning",
+        "Message"
+      ],
+      "related": [
+        "go-to-market-strategy",
+        "target-persona",
+        "launch-channel"
+      ],
+      "sourceIds": [
+        "customer-research-summary"
+      ]
+    },
+    {
+      "id": "customer-objection",
+      "title": "Customer Objection",
+      "category": "concept",
+      "summary": "Concern or blocker that may prevent adoption.",
+      "details": "Objections inform messaging, enablement, support content, and readiness planning.",
+      "aliases": [
+        "Objection",
+        "Concern"
+      ],
+      "related": [
+        "target-persona",
+        "sales-enablement",
+        "support-readiness"
+      ],
+      "sourceIds": [
+        "customer-research-summary"
+      ]
+    },
+    {
+      "id": "launch-channel",
+      "title": "Launch Channel",
+      "category": "channel",
+      "summary": "Surface used to reach, educate, or activate the target audience.",
+      "details": "Channels can include email, events, sales outreach, in-product messaging, partner motions, or community campaigns.",
+      "aliases": [
+        "Channel"
+      ],
+      "related": [
+        "go-to-market-strategy",
+        "email-campaign",
+        "webinar",
+        "partner-motion"
+      ],
+      "sourceIds": [
+        "launch-workshop"
+      ]
+    },
+    {
+      "id": "email-campaign",
+      "title": "Email Campaign",
+      "category": "channel",
+      "summary": "Outbound sequence used to announce, educate, or nurture customers.",
+      "details": "Email is often paired with landing pages, webinars, and sales follow-up.",
+      "aliases": [
+        "Email"
+      ],
+      "related": [
+        "launch-channel",
+        "conversion-rate",
+        "positioning-statement"
+      ],
+      "sourceIds": [
+        "launch-workshop",
+        "launch-scorecard"
+      ]
+    },
+    {
+      "id": "webinar",
+      "title": "Webinar",
+      "category": "channel",
+      "summary": "Live or recorded session used to explain the launch and answer questions.",
+      "details": "Webinars help teams validate interest, capture objections, and generate qualified follow-up.",
+      "aliases": [
+        "Event"
+      ],
+      "related": [
+        "launch-channel",
+        "qualified-lead",
+        "customer-objection"
+      ],
+      "sourceIds": [
+        "launch-workshop"
+      ]
+    },
+    {
+      "id": "partner-motion",
+      "title": "Partner Motion",
+      "category": "channel",
+      "summary": "Launch path that reaches customers through partner sellers or ecosystems.",
+      "details": "Partner motions need clear enablement, shared messaging, and handoff rules.",
+      "aliases": [
+        "Partner GTM"
+      ],
+      "related": [
+        "launch-channel",
+        "sales-enablement",
+        "qualified-lead"
+      ],
+      "sourceIds": [
+        "launch-workshop"
+      ]
+    },
+    {
+      "id": "launch-readiness-review",
+      "title": "Launch Readiness Review",
+      "category": "process",
+      "summary": "Checkpoint that confirms launch requirements are met.",
+      "details": "The review validates dependencies, risks, support coverage, channel readiness, and go/no-go criteria.",
+      "aliases": [
+        "Readiness Review",
+        "Go/No-Go"
+      ],
+      "related": [
+        "product-launch",
+        "readiness-owner",
+        "launch-risk",
+        "support-readiness"
+      ],
+      "sourceIds": [
+        "launch-workshop"
+      ]
+    },
+    {
+      "id": "readiness-owner",
+      "title": "Readiness Owner",
+      "category": "role",
+      "summary": "Person responsible for confirming a readiness area is prepared.",
+      "details": "Readiness owners typically cover product, support, analytics, marketing, sales, and customer communications.",
+      "aliases": [
+        "Readiness Lead"
+      ],
+      "related": [
+        "launch-readiness-review",
+        "support-readiness",
+        "sales-enablement"
+      ],
+      "sourceIds": [
+        "launch-workshop"
+      ]
+    },
+    {
+      "id": "support-readiness",
+      "title": "Support Readiness",
+      "category": "process",
+      "summary": "Preparation of support teams, docs, escalation paths, and known issues.",
+      "details": "Support readiness reduces launch risk and makes customer feedback actionable.",
+      "aliases": [
+        "Support Plan"
+      ],
+      "related": [
+        "launch-readiness-review",
+        "customer-objection",
+        "feedback-loop"
+      ],
+      "sourceIds": [
+        "launch-workshop",
+        "customer-research-summary"
+      ]
+    },
+    {
+      "id": "sales-enablement",
+      "title": "Sales Enablement",
+      "category": "artifact",
+      "summary": "Materials and guidance that help sellers explain and position the launch.",
+      "details": "Enablement can include talk tracks, objection handling, demos, FAQs, and target account guidance.",
+      "aliases": [
+        "Enablement"
+      ],
+      "related": [
+        "customer-objection",
+        "partner-motion",
+        "qualified-lead"
+      ],
+      "sourceIds": [
+        "launch-workshop",
+        "customer-research-summary"
+      ]
+    },
+    {
+      "id": "launch-milestone",
+      "title": "Launch Milestone",
+      "category": "artifact",
+      "summary": "Important date or checkpoint in the launch plan.",
+      "details": "Milestones coordinate dependent work such as content freeze, readiness review, channel activation, and post-launch analysis.",
+      "aliases": [
+        "Milestone"
+      ],
+      "related": [
+        "launch-plan",
+        "launch-risk",
+        "post-launch-review"
+      ],
+      "sourceIds": [
+        "launch-workshop"
+      ]
+    },
+    {
+      "id": "launch-risk",
+      "title": "Launch Risk",
+      "category": "concept",
+      "summary": "Potential issue that could delay, weaken, or confuse the launch.",
+      "details": "Risks should be assigned an owner, mitigation, due date, and review cadence.",
+      "aliases": [
+        "Risk"
+      ],
+      "related": [
+        "launch-plan",
+        "launch-readiness-review",
+        "readiness-owner"
+      ],
+      "sourceIds": [
+        "launch-workshop"
+      ]
+    },
+    {
+      "id": "success-metric",
+      "title": "Success Metric",
+      "category": "metric",
+      "summary": "Measurement used to evaluate whether the launch met its goals.",
+      "details": "Metrics make outcomes observable and support post-launch learning.",
+      "aliases": [
+        "KPI",
+        "Metric"
+      ],
+      "related": [
+        "product-launch",
+        "adoption-rate",
+        "conversion-rate",
+        "retention-rate"
+      ],
+      "sourceIds": [
+        "launch-scorecard"
+      ]
+    },
+    {
+      "id": "adoption-funnel",
+      "title": "Adoption Funnel",
+      "category": "metric",
+      "summary": "Progression from awareness to trial, activation, and continued use.",
+      "details": "The funnel helps teams see where customers drop off and where launch improvements are needed.",
+      "aliases": [
+        "Funnel"
+      ],
+      "related": [
+        "customer-segment",
+        "adoption-rate",
+        "conversion-rate",
+        "retention-rate"
+      ],
+      "sourceIds": [
+        "launch-scorecard",
+        "customer-research-summary"
+      ]
+    },
+    {
+      "id": "adoption-rate",
+      "title": "Adoption Rate",
+      "category": "metric",
+      "summary": "Share of the target audience that starts using the launched product or feature.",
+      "details": "Adoption rate is an early signal of reach, relevance, and activation success.",
+      "aliases": [
+        "Adoption"
+      ],
+      "related": [
+        "success-metric",
+        "adoption-funnel"
+      ],
+      "sourceIds": [
+        "launch-scorecard"
+      ]
+    },
+    {
+      "id": "conversion-rate",
+      "title": "Conversion Rate",
+      "category": "metric",
+      "summary": "Share of users who take a desired action after launch exposure.",
+      "details": "Conversion can measure signups, trial starts, registrations, qualified leads, or purchases.",
+      "aliases": [
+        "Conversion"
+      ],
+      "related": [
+        "success-metric",
+        "email-campaign",
+        "qualified-lead"
+      ],
+      "sourceIds": [
+        "launch-scorecard"
+      ]
+    },
+    {
+      "id": "qualified-lead",
+      "title": "Qualified Lead",
+      "category": "metric",
+      "summary": "Prospect that meets agreed criteria for sales follow-up.",
+      "details": "Qualified leads connect channel activity to measurable pipeline and seller action.",
+      "aliases": [
+        "QL",
+        "Lead"
+      ],
+      "related": [
+        "webinar",
+        "partner-motion",
+        "conversion-rate",
+        "sales-enablement"
+      ],
+      "sourceIds": [
+        "launch-scorecard"
+      ]
+    },
+    {
+      "id": "retention-rate",
+      "title": "Retention Rate",
+      "category": "metric",
+      "summary": "Share of activated users who continue using the product over time.",
+      "details": "Retention helps distinguish launch curiosity from durable value.",
+      "aliases": [
+        "Retention"
+      ],
+      "related": [
+        "success-metric",
+        "adoption-funnel",
+        "feedback-loop"
+      ],
+      "sourceIds": [
+        "launch-scorecard"
+      ]
+    },
+    {
+      "id": "feedback-loop",
+      "title": "Feedback Loop",
+      "category": "process",
+      "summary": "Mechanism for collecting launch feedback and turning it into improvements.",
+      "details": "Feedback loops connect support signals, customer research, metrics, and roadmap decisions.",
+      "aliases": [
+        "Feedback"
+      ],
+      "related": [
+        "support-readiness",
+        "post-launch-review",
+        "roadmap"
+      ],
+      "sourceIds": [
+        "customer-research-summary",
+        "launch-scorecard"
+      ]
+    },
+    {
+      "id": "post-launch-review",
+      "title": "Post-Launch Review",
+      "category": "process",
+      "summary": "Review that compares launch outcomes against goals and assumptions.",
+      "details": "The review captures lessons, metric movement, customer feedback, and follow-up actions.",
+      "aliases": [
+        "Launch Retro",
+        "Retrospective"
+      ],
+      "related": [
+        "feedback-loop",
+        "success-metric",
+        "launch-milestone"
+      ],
+      "sourceIds": [
+        "launch-workshop",
+        "launch-scorecard"
+      ]
+    },
+    {
+      "id": "roadmap",
+      "title": "Roadmap",
+      "category": "artifact",
+      "summary": "Sequenced view of future product direction and priorities.",
+      "details": "Launch outcomes should influence roadmap decisions when evidence supports a change.",
+      "aliases": [
+        "Product Roadmap"
+      ],
+      "related": [
+        "product-manager",
+        "feedback-loop",
+        "post-launch-review"
+      ],
+      "sourceIds": [
+        "launch-workshop",
+        "customer-research-summary"
+      ]
+    },
+    {
+      "id": "landing-page",
+      "title": "Landing Page",
+      "category": "asset",
+      "summary": "Web page that explains the launch offer and captures customer interest.",
+      "details": "Landing pages connect positioning, calls to action, tracking, and conversion goals.",
+      "aliases": [
+        "Launch Page"
+      ],
+      "related": [
+        "launch-channel",
+        "email-campaign",
+        "conversion-rate",
+        "call-to-action"
+      ],
+      "sourceIds": [
+        "launch-workshop",
+        "launch-scorecard"
+      ]
+    },
+    {
+      "id": "call-to-action",
+      "title": "Call to Action",
+      "category": "asset",
+      "summary": "Prompt that asks the audience to take the next step.",
+      "details": "A CTA can ask people to register, start a trial, request a demo, read docs, or contact sales.",
+      "aliases": [
+        "CTA"
+      ],
+      "related": [
+        "landing-page",
+        "conversion-rate",
+        "adoption-funnel"
+      ],
+      "sourceIds": [
+        "customer-research-summary",
+        "launch-scorecard"
+      ]
+    },
+    {
+      "id": "demo-script",
+      "title": "Demo Script",
+      "category": "asset",
+      "summary": "Structured story used to show the product in a repeatable way.",
+      "details": "Demo scripts help presenters connect product behavior to customer pain and launch positioning.",
+      "aliases": [
+        "Demo"
+      ],
+      "related": [
+        "sales-enablement",
+        "positioning-statement",
+        "customer-objection"
+      ],
+      "sourceIds": [
+        "launch-workshop"
+      ]
+    },
+    {
+      "id": "faq",
+      "title": "FAQ",
+      "category": "asset",
+      "summary": "Answers to expected customer, seller, support, or partner questions.",
+      "details": "FAQs reduce ambiguity and help teams respond consistently after launch.",
+      "aliases": [
+        "Frequently Asked Questions"
+      ],
+      "related": [
+        "support-readiness",
+        "customer-objection",
+        "sales-enablement"
+      ],
+      "sourceIds": [
+        "customer-research-summary"
+      ]
+    },
+    {
+      "id": "release-notes",
+      "title": "Release Notes",
+      "category": "asset",
+      "summary": "Concise description of what changed and what users should know.",
+      "details": "Release notes support customer communication, internal readiness, and post-launch support.",
+      "aliases": [
+        "Notes"
+      ],
+      "related": [
+        "product-launch",
+        "support-readiness",
+        "documentation"
+      ],
+      "sourceIds": [
+        "launch-workshop"
+      ]
+    },
+    {
+      "id": "documentation",
+      "title": "Documentation",
+      "category": "asset",
+      "summary": "Guidance that helps users understand, adopt, and troubleshoot the launch.",
+      "details": "Documentation connects product details to onboarding, support, and success metrics.",
+      "aliases": [
+        "Docs"
+      ],
+      "related": [
+        "support-readiness",
+        "release-notes",
+        "onboarding-flow"
+      ],
+      "sourceIds": [
+        "launch-workshop"
+      ]
+    },
+    {
+      "id": "awareness-stage",
+      "title": "Awareness Stage",
+      "category": "stage",
+      "summary": "Point in the funnel where customers first learn about the launch.",
+      "details": "Awareness is usually driven by channels such as email, webinars, partners, and landing pages.",
+      "aliases": [
+        "Awareness"
+      ],
+      "related": [
+        "adoption-funnel",
+        "launch-channel",
+        "email-campaign"
+      ],
+      "sourceIds": [
+        "launch-scorecard"
+      ]
+    },
+    {
+      "id": "trial-stage",
+      "title": "Trial Stage",
+      "category": "stage",
+      "summary": "Point where customers evaluate the product through hands-on use.",
+      "details": "Trial stage metrics help teams understand whether launch traffic becomes meaningful product exploration.",
+      "aliases": [
+        "Trial"
+      ],
+      "related": [
+        "adoption-funnel",
+        "conversion-rate",
+        "onboarding-flow"
+      ],
+      "sourceIds": [
+        "launch-scorecard"
+      ]
+    },
+    {
+      "id": "activation-stage",
+      "title": "Activation Stage",
+      "category": "stage",
+      "summary": "Point where users complete the first meaningful product action.",
+      "details": "Activation shows whether users understand the value proposition well enough to start using it.",
+      "aliases": [
+        "Activation"
+      ],
+      "related": [
+        "adoption-funnel",
+        "adoption-rate",
+        "onboarding-flow"
+      ],
+      "sourceIds": [
+        "launch-scorecard"
+      ]
+    },
+    {
+      "id": "retention-stage",
+      "title": "Retention Stage",
+      "category": "stage",
+      "summary": "Point where customers keep using the product after the initial launch moment.",
+      "details": "Retention separates durable value from one-time curiosity.",
+      "aliases": [
+        "Retention"
+      ],
+      "related": [
+        "adoption-funnel",
+        "retention-rate",
+        "feedback-loop"
+      ],
+      "sourceIds": [
+        "launch-scorecard"
+      ]
+    },
+    {
+      "id": "customer-insight",
+      "title": "Customer Insight",
+      "category": "insight",
+      "summary": "Actionable learning about customer behavior, needs, or friction.",
+      "details": "Insights connect research, support feedback, and metrics to better launch decisions.",
+      "aliases": [
+        "Insight"
+      ],
+      "related": [
+        "feedback-loop",
+        "roadmap"
+      ],
+      "sourceIds": [
+        "customer-research-summary"
+      ]
+    },
+    {
+      "id": "usage-signal",
+      "title": "Usage Signal",
+      "category": "insight",
+      "summary": "Observed behavior that indicates whether people are adopting the launch.",
+      "details": "Usage signals can include visits, trials, activations, repeat use, or feature engagement.",
+      "aliases": [
+        "Signal"
+      ],
+      "related": [
+        "adoption-rate",
+        "retention-rate"
+      ],
+      "sourceIds": [
+        "launch-scorecard"
+      ]
+    },
+    {
+      "id": "support-signal",
+      "title": "Support Signal",
+      "category": "insight",
+      "summary": "Pattern from support tickets, questions, or escalations after launch.",
+      "details": "Support signals reveal confusion, missing docs, product issues, and objections that messaging did not resolve.",
+      "aliases": [
+        "Support Signal"
+      ],
+      "related": [
+        "support-readiness",
+        "feedback-loop",
+        "faq"
+      ],
+      "sourceIds": [
+        "customer-research-summary"
+      ]
+    },
+    {
+      "id": "market-signal",
+      "title": "Market Signal",
+      "category": "insight",
+      "summary": "External indication of customer, competitor, or category movement.",
+      "details": "Market signals help teams adapt positioning and prioritize channels.",
+      "aliases": [
+        "Market Signal"
+      ],
+      "related": [
+        "go-to-market-strategy",
+        "positioning-statement",
+        "customer-segment"
+      ],
+      "sourceIds": [
+        "customer-research-summary"
+      ]
+    },
+    {
+      "id": "dependency-risk",
+      "title": "Dependency Risk",
+      "category": "risk",
+      "summary": "Risk caused by upstream work, systems, approvals, or teams not being ready.",
+      "details": "Dependency risks should have an owner, mitigation plan, and date tied to a launch milestone.",
+      "aliases": [
+        "Dependency"
+      ],
+      "related": [
+        "launch-risk",
+        "launch-milestone",
+        "readiness-owner"
+      ],
+      "sourceIds": [
+        "launch-workshop"
+      ]
+    },
+    {
+      "id": "message-risk",
+      "title": "Message Risk",
+      "category": "risk",
+      "summary": "Risk that the audience misunderstands or ignores the launch message.",
+      "details": "Message risk is reduced through customer research, positioning tests, and objection handling.",
+      "aliases": [
+        "Messaging Risk"
+      ],
+      "related": [
+        "launch-risk",
+        "positioning-statement",
+        "customer-objection"
+      ],
+      "sourceIds": [
+        "customer-research-summary"
+      ]
+    },
+    {
+      "id": "support-risk",
+      "title": "Support Risk",
+      "category": "risk",
+      "summary": "Risk that support teams or materials are not ready for customer needs.",
+      "details": "Support risk can affect adoption, trust, and retention after launch.",
+      "aliases": [
+        "Support Risk"
+      ],
+      "related": [
+        "launch-risk",
+        "support-readiness",
+        "faq"
+      ],
+      "sourceIds": [
+        "launch-workshop"
+      ]
+    },
+    {
+      "id": "measurement-risk",
+      "title": "Measurement Risk",
+      "category": "risk",
+      "summary": "Risk that success cannot be evaluated clearly after launch.",
+      "details": "Measurement risk appears when metrics, baselines, instrumentation, or ownership are unclear.",
+      "aliases": [
+        "Analytics Risk"
+      ],
+      "related": [
+        "launch-risk",
+        "success-metric"
+      ],
+      "sourceIds": [
+        "launch-scorecard"
+      ]
+    },
+    {
+      "id": "positioning-test",
+      "title": "Positioning Test",
+      "category": "experiment",
+      "summary": "Experiment that checks whether launch messaging is clear and compelling.",
+      "details": "A positioning test can compare claims, headlines, personas, or objection-handling language.",
+      "aliases": [
+        "Message Test"
+      ],
+      "related": [
+        "positioning-statement",
+        "customer-segment",
+        "message-risk"
+      ],
+      "sourceIds": [
+        "customer-research-summary"
+      ]
+    },
+    {
+      "id": "channel-test",
+      "title": "Channel Test",
+      "category": "experiment",
+      "summary": "Experiment that compares how different channels perform for the same audience.",
+      "details": "Channel tests help decide whether email, webinars, partners, or in-product surfaces deserve more investment.",
+      "aliases": [
+        "Channel Experiment"
+      ],
+      "related": [
+        "launch-channel",
+        "email-campaign",
+        "webinar",
+        "partner-motion"
+      ],
+      "sourceIds": [
+        "launch-scorecard"
+      ]
+    },
+    {
+      "id": "onboarding-test",
+      "title": "Onboarding Test",
+      "category": "experiment",
+      "summary": "Experiment that checks whether users can reach first value.",
+      "details": "Onboarding tests expose activation friction before it becomes a retention problem.",
+      "aliases": [
+        "Activation Test"
+      ],
+      "related": [
+        "onboarding-flow",
+        "activation-stage",
+        "adoption-rate"
+      ],
+      "sourceIds": [
+        "launch-scorecard"
+      ]
+    },
+    {
+      "id": "pricing-test",
+      "title": "Pricing Test",
+      "category": "experiment",
+      "summary": "Experiment that checks whether packaging or price blocks adoption.",
+      "details": "Pricing tests should be tied to a hypothesis, segment, measurement plan, and guardrails.",
+      "aliases": [
+        "Packaging Test"
+      ],
+      "related": [
+        "customer-segment",
+        "conversion-rate",
+        "qualified-lead"
+      ],
+      "sourceIds": [
+        "customer-research-summary"
+      ]
+    },
+    {
+      "id": "launch-standup",
+      "title": "Launch Standup",
+      "category": "operation",
+      "summary": "Recurring meeting that coordinates active launch work.",
+      "details": "Standups keep blockers, risks, milestones, and owners visible during launch execution.",
+      "aliases": [
+        "Standup"
+      ],
+      "related": [
+        "launch-plan",
+        "launch-owner",
+        "launch-risk"
+      ],
+      "sourceIds": [
+        "launch-workshop"
+      ]
+    },
+    {
+      "id": "workback-plan",
+      "title": "Workback Plan",
+      "category": "operation",
+      "summary": "Reverse timeline from launch date to required prep milestones.",
+      "details": "Workback plans help teams sequence content, readiness, review, and channel activation.",
+      "aliases": [
+        "Workback"
+      ],
+      "related": [
+        "launch-plan",
+        "launch-milestone",
+        "dependency-risk"
+      ],
+      "sourceIds": [
+        "launch-workshop"
+      ]
+    },
+    {
+      "id": "issue-triage",
+      "title": "Issue Triage",
+      "category": "operation",
+      "summary": "Process for prioritizing and routing launch problems.",
+      "details": "Triage connects support signals, launch risks, product fixes, and communications.",
+      "aliases": [
+        "Triage"
+      ],
+      "related": [
+        "support-signal",
+        "support-readiness",
+        "feedback-loop"
+      ],
+      "sourceIds": [
+        "customer-research-summary"
+      ]
+    },
+    {
+      "id": "stakeholder-update",
+      "title": "Stakeholder Update",
+      "category": "operation",
+      "summary": "Concise status communication for launch sponsors and collaborators.",
+      "details": "Updates summarize progress, decisions, risks, metrics, and next actions.",
+      "aliases": [
+        "Status Update"
+      ],
+      "related": [
+        "launch-owner",
+        "launch-milestone",
+        "post-launch-review"
+      ],
+      "sourceIds": [
+        "launch-workshop"
+      ]
+    },
+    {
+      "id": "onboarding-flow",
+      "title": "Onboarding Flow",
+      "category": "process",
+      "summary": "Guided path that helps new users reach first value.",
+      "details": "Onboarding turns awareness and trial into activation by reducing setup friction.",
+      "aliases": [
+        "Onboarding"
+      ],
+      "related": [
+        "trial-stage",
+        "activation-stage",
+        "documentation",
+        "onboarding-test"
+      ],
+      "sourceIds": [
+        "customer-research-summary",
+        "launch-scorecard"
+      ]
+    },
+    {
+      "id": "baseline-metric",
+      "title": "Baseline Metric",
+      "category": "metric",
+      "summary": "Pre-launch measurement used as a comparison point.",
+      "details": "Baselines make it possible to separate launch impact from normal variation.",
+      "aliases": [
+        "Baseline"
+      ],
+      "related": [
+        "success-metric",
+        "measurement-risk",
+        "post-launch-review"
+      ],
+      "sourceIds": [
+        "launch-scorecard"
+      ]
+    }
+  ],
+  "edges": [
+    {
+      "source": "product-launch",
+      "label": "uses",
+      "target": "launch-plan"
+    },
+    {
+      "source": "product-launch",
+      "label": "guided-by",
+      "target": "go-to-market-strategy"
+    },
+    {
+      "source": "product-launch",
+      "label": "checked-by",
+      "target": "launch-readiness-review"
+    },
+    {
+      "source": "product-launch",
+      "label": "measured-by",
+      "target": "success-metric"
+    },
+    {
+      "source": "go-to-market-strategy",
+      "label": "targets",
+      "target": "customer-segment"
+    },
+    {
+      "source": "go-to-market-strategy",
+      "label": "uses",
+      "target": "positioning-statement"
+    },
+    {
+      "source": "go-to-market-strategy",
+      "label": "activates",
+      "target": "launch-channel"
+    },
+    {
+      "source": "launch-owner",
+      "label": "owns",
+      "target": "launch-plan"
+    },
+    {
+      "source": "product-manager",
+      "label": "owns",
+      "target": "roadmap"
+    },
+    {
+      "source": "customer-segment",
+      "label": "represented-by",
+      "target": "target-persona"
+    },
+    {
+      "source": "target-persona",
+      "label": "raises",
+      "target": "customer-objection"
+    },
+    {
+      "source": "positioning-statement",
+      "label": "answers",
+      "target": "customer-objection"
+    },
+    {
+      "source": "launch-channel",
+      "label": "includes",
+      "target": "email-campaign"
+    },
+    {
+      "source": "launch-channel",
+      "label": "includes",
+      "target": "webinar"
+    },
+    {
+      "source": "launch-channel",
+      "label": "includes",
+      "target": "partner-motion"
+    },
+    {
+      "source": "readiness-owner",
+      "label": "reviews",
+      "target": "launch-readiness-review"
+    },
+    {
+      "source": "launch-readiness-review",
+      "label": "checks",
+      "target": "support-readiness"
+    },
+    {
+      "source": "launch-readiness-review",
+      "label": "tracks",
+      "target": "launch-risk"
+    },
+    {
+      "source": "sales-enablement",
+      "label": "handles",
+      "target": "customer-objection"
+    },
+    {
+      "source": "launch-plan",
+      "label": "contains",
+      "target": "launch-milestone"
+    },
+    {
+      "source": "success-metric",
+      "label": "includes",
+      "target": "adoption-rate"
+    },
+    {
+      "source": "success-metric",
+      "label": "includes",
+      "target": "conversion-rate"
+    },
+    {
+      "source": "success-metric",
+      "label": "includes",
+      "target": "retention-rate"
+    },
+    {
+      "source": "adoption-funnel",
+      "label": "measured-by",
+      "target": "adoption-rate"
+    },
+    {
+      "source": "adoption-funnel",
+      "label": "measured-by",
+      "target": "conversion-rate"
+    },
+    {
+      "source": "webinar",
+      "label": "produces",
+      "target": "qualified-lead"
+    },
+    {
+      "source": "partner-motion",
+      "label": "produces",
+      "target": "qualified-lead"
+    },
+    {
+      "source": "feedback-loop",
+      "label": "feeds",
+      "target": "post-launch-review"
+    },
+    {
+      "source": "post-launch-review",
+      "label": "informs",
+      "target": "roadmap"
+    },
+    {
+      "source": "support-readiness",
+      "label": "feeds",
+      "target": "feedback-loop"
+    },
+    {
+      "source": "landing-page",
+      "label": "contains",
+      "target": "call-to-action"
+    },
+    {
+      "source": "landing-page",
+      "label": "uses",
+      "target": "positioning-statement"
+    },
+    {
+      "source": "email-campaign",
+      "label": "links-to",
+      "target": "landing-page"
+    },
+    {
+      "source": "sales-enablement",
+      "label": "uses",
+      "target": "demo-script"
+    },
+    {
+      "source": "support-readiness",
+      "label": "uses",
+      "target": "faq"
+    },
+    {
+      "source": "support-readiness",
+      "label": "uses",
+      "target": "documentation"
+    },
+    {
+      "source": "release-notes",
+      "label": "supported-by",
+      "target": "documentation"
+    },
+    {
+      "source": "adoption-funnel",
+      "label": "starts-with",
+      "target": "awareness-stage"
+    },
+    {
+      "source": "awareness-stage",
+      "label": "precedes",
+      "target": "trial-stage"
+    },
+    {
+      "source": "trial-stage",
+      "label": "precedes",
+      "target": "activation-stage"
+    },
+    {
+      "source": "activation-stage",
+      "label": "precedes",
+      "target": "retention-stage"
+    },
+    {
+      "source": "feedback-loop",
+      "label": "produces",
+      "target": "customer-insight"
+    },
+    {
+      "source": "adoption-rate",
+      "label": "based-on",
+      "target": "usage-signal"
+    },
+    {
+      "source": "retention-rate",
+      "label": "based-on",
+      "target": "usage-signal"
+    },
+    {
+      "source": "support-readiness",
+      "label": "produces",
+      "target": "support-signal"
+    },
+    {
+      "source": "go-to-market-strategy",
+      "label": "responds-to",
+      "target": "market-signal"
+    },
+    {
+      "source": "launch-risk",
+      "label": "includes",
+      "target": "dependency-risk"
+    },
+    {
+      "source": "launch-risk",
+      "label": "includes",
+      "target": "message-risk"
+    },
+    {
+      "source": "launch-risk",
+      "label": "includes",
+      "target": "support-risk"
+    },
+    {
+      "source": "launch-risk",
+      "label": "includes",
+      "target": "measurement-risk"
+    },
+    {
+      "source": "positioning-test",
+      "label": "tests",
+      "target": "positioning-statement"
+    },
+    {
+      "source": "channel-test",
+      "label": "compares",
+      "target": "launch-channel"
+    },
+    {
+      "source": "onboarding-test",
+      "label": "tests",
+      "target": "onboarding-flow"
+    },
+    {
+      "source": "pricing-test",
+      "label": "tests",
+      "target": "conversion-rate"
+    },
+    {
+      "source": "launch-standup",
+      "label": "tracks",
+      "target": "launch-risk"
+    },
+    {
+      "source": "workback-plan",
+      "label": "sequences",
+      "target": "launch-milestone"
+    },
+    {
+      "source": "issue-triage",
+      "label": "responds-to",
+      "target": "support-signal"
+    },
+    {
+      "source": "stakeholder-update",
+      "label": "summarizes",
+      "target": "launch-plan"
+    },
+    {
+      "source": "onboarding-flow",
+      "label": "drives",
+      "target": "activation-stage"
+    },
+    {
+      "source": "baseline-metric",
+      "label": "supports",
+      "target": "post-launch-review"
+    }
+  ]
+}

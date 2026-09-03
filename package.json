@@ -1,0 +1,17 @@
+{
+  "name": "term-graph-visualizer",
+  "version": "0.1.0",
+  "license": "MIT",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "init:local": "node scripts/init-local-config.cjs",
+    "dev": "vite --host 127.0.0.1",
+    "build": "vite build",
+    "preview": "vite preview --host 127.0.0.1",
+    "validate:config": "node scripts/validate-config.cjs"
+  },
+  "devDependencies": {
+    "vite": "^6.3.5"
+  }
+}

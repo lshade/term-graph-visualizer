@@ -1,0 +1,18 @@
+node_modules
+dist
+.DS_Store
+*.log
+.env
+.env.local
+.env.*.local
+
+# Private/project-specific dictionaries and local enrichment scripts.
+public/configs/local-*.json
+scripts/local-*.cjs
+
+# Static snapshots generated from private dictionaries.
+exports
+*.local.html
+
+# Internal public-release assessment artifacts.
+docs/debranding/
